@@ -74,6 +74,10 @@ pub fn build(b: *std.Build) !void {
             .name = "glyphs",
             .deps = &.{ .freetype, .assets },
         },
+        .{
+            .name = "tilemap",
+            .deps = &.{ .zigimg, .assets },
+        },
     }) |example| {
         // FIXME: this is workaround for a problem that some examples
         // (having the std_platform_only=true field) as well as zigimg
